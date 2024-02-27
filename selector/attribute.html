@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* a {
+        text-decoration: none;
+      } */
+      [target] {
+        text-decoration: none;
+      }
+      [target="_blank"] {
+        background-color: blue;
+        color: white;
+      }
+      [target="_self"] {
+        background-color: red;
+        color: white;
+      }
+      /* 불릿기호 없애기 */
+      /* list-style-type : none; */
+      /* .link1,
+      .link2 {
+        list-style-type: none;
+      } */
+      [class^="link"] {
+        list-style-type: none;
+      }
+      /* 안쪽 여백 : padding */
+      /* [class$="name"] {
+        padding: 20px;
+        color: red;
+      } */
+      /* ~=, *= : 여러개의 클래스명이 존재할 때 특정 클래스명을 포함하고 있는 */
+      /* [class~="test"] {
+        padding: 20px;
+        color: red;
+      } */
+      [class*="fr"] {
+        padding: 20px;
+        color: red;
+      }
+      /* |= : value 다음에 - 이 따라오는 경우만 */
+      [class|=top]{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#" target="_blank">google</a>
+      </li>
+      <li class="link1">
+        <a href="#" target="_blank">daum</a>
+      </li>
+      <li class="link2"></li>
+        <a href="#" target="_self">naver</a>
+      </li>
+    </ul>
+    <a href="mailto:master@google.com">master@google.com</a>
+    <div>
+      <input type="text" name="" id="" class="fruit_name test" />
+      <input type="text" name="" id="" class="fruit_color test" />
+    </div>
+    <h1 class="top-header">Welcome</h1>
+    <p class="top-text">Hello World</p>
+    <p class="topcontent">CSS</p>
+  </body>
+</html>
