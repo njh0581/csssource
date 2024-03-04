@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #222;
+      }
+      .grid {
+        width: 500px;
+        margin: 0 auto;
+        background: white;
+        /* overflow:hidden */
+        /* font-size: 0;
+        text-align: right; */
+      }
+      /* .grid-item {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        vertical-align: top;
+      } */
+      .grid-item {
+        width: 100px;
+        height: 100px;
+        float: right;
+      }
+      .grid-item.a {
+        background: orange;
+      }
+      .grid-item.b {
+        background: orangered;
+      }
+      .grid-item.c {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        1) inline-block
+        하단 공백 - vertical-align or font-size(글자가 존재한다면 이건못씀)
+        태그 다음에 있는 엔터 때무에 요소 사이에 공백 생김 - font-size:0 or 태그 사이에 엔터 없애기
+
+        text-align 사용 가능
+        
+        2) float
+        모든 자식들이 float된 상태이면 부모는 자식요소인줄 모름
+        -overflow:hidden
+        -clearfix 크래스 추가 후 작업
+        -inline-block 정렬 개념과 다르게 오른쪽 배치 가능
+        -요소들을 왼쪽,오른쪽으로 나눠서 배치 가능
+
+
+
+     -->
+    <div class="grid">
+      <div class="grid-item a"></div>
+      <div class="grid-item b"></div>
+      <div class="grid-item c"></div>
+    </div>
+  </body>
+</html>

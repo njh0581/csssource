@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        /* file-direction: row */
+        flex-wrap: wrap;
+        border: 2px solid;
+        /* align-content: space-evenly; */
+        align-items: baseline;
+        /*justify-content: space-around; */
+        height: 400px;
+      }
+      .container div {
+        width: 200px;
+        height: 100px;
+      }
+      /* 배경색 */
+      .container .item:nth-child(1) {
+        background: green;
+      }
+      .container .item:nth-child(2) {
+        background: violet;
+      }
+      .container .item:nth-child(3) {
+        background: coral;
+        font-size: 50px;
+      }
+      .container .item:nth-child(4) {
+        background: purple;
+        height: 80px;
+      }
+      .container .item:nth-child(5) {
+        background: red;
+        height: 60px;
+      }
+      .container .item:nth-child(6) {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        레이아웃 : 위-아래 수직 구성(스크롤 사용)
+        1.수평(왼->오)
+        1)float
+        2)inLine-block
+        3)flex
+          - flex-direction(방향) : row(기본), column(위 -> 아래), row-reverse, column-reverse;
+          - flex-wrap(여러줄 허용 여부) : wrap, nowrap(기본, 한줄로), wrap-reverse(여러줄로 이동시 맨 첫번째 요소부터)
+          - justify-content(주 축 정렬) : flex-start(기본), flex-end(오른쪽 정렬), center, space-between(첫요소는 왼쪽에 마지막 요소는 오른쪽으로 몰고 요소 사이에 공백 배치), 
+                                          space-around(모든 요소 사이에 공백 배치), space-evenly(모든 요소 사이에 공백을 통일함)
+            주축 : 요소가 배치되는 방향 (flex-direction: row 라면 가로축, flex-direction:column => 세로축)
+            보조(교차)축 : 주축과 교차 되는 축
+          - align-content(교차 축 정렬) : 교차 축 공간이 있고, 주축에서 여러 줄 허용
+            stretch : 부모의 height 에 맞춰 자식 높이가 늘어남(기본-공백 안생김)
+          -align-item : 한 줄 일 때 정렬
+            stretch: 컨테이너 교차축을 채우기 위해 item 늘림
+            flex-start, flex-end, center, baseline(item을 문자 기준선에 정렬)
+            
+     -->
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+      <div class="item">F</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet dignissimos autem maxime unde magnam doloremque illum aliquam. Error id,
+      maxime fugit tempora consequuntur placeat. Consequatur in aliquam numquam molestiae debitis!
+    </p>
+  </body>
+</html>
