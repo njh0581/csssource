@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 요소 크기 산정시 border 포함 */
+      * {
+        box-sizing: border-box;
+      }
+      /* body 배경색 #ecf0f1 */
+      body {
+        background-color: #ecf0f1;
+      }
+      /* wrapper max-width 60rem width 100%, margin 2rem auto */
+      .wrapper {
+        max-width: 60rem;
+        width: 100%;
+        margin: 2rem auto;
+      }
+      /* flexbg flex 컨테이너 설정 */
+      .flexbg {
+        display: flex;
+      }
+      .flexbg main {
+        /* 배경색 흰색, width 60%, padding 1.618rem */
+        background: white;
+        width: 60%;
+        padding: 1.618rem;
+        order: 2;
+      }
+
+      /* sidebar width 20%, padding 1.168rem */
+      .flexbg .sidebar {
+        width: 20%;
+        padding: 1.168rem;
+        color: white;
+      }
+
+      .flexbg .left {
+        /* 배경색 #3498db */
+        background: #3498db;
+        order: 1;
+      }
+      .flexbg .right {
+        /* 배경색 #34495e */
+        background: #34495e;
+        order: 3;
+      }
+
+      /* 481 ~768 */
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          /* 배경색 흰색, width 60%, padding 1.618rem */
+          width: 100%;
+          order: 1;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+      }
+
+      /* 0~480 */
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fuga, necessitatibus sed delectus et exercitationem natus totam
+          consequatur quo labore iste aliquid aspernatur officiis commodi porro possimus earum consectetur libero quibusdam, pariatur omnis odit
+          eaque. Voluptas dolorem vel perferendis possimus nulla, eaque fugit dolorum officiis tempore libero similique vitae sint tenetur nesciunt a
+          repellat fuga autem quidem architecto est consectetur explicabo. Pariatur consectetur itaque nihil, porro possimus reiciendis laborum
+          ratione ab iusto vel unde sint quaerat obcaecati blanditiis a reprehenderit, soluta eius vero laudantium perferendis enim, et deserunt
+          ullam! Nemo mollitia numquam, neque et ipsum in qui optio suscipit possimus.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fuga, necessitatibus sed delectus et exercitationem natus totam
+          consequatur quo labore iste aliquid aspernatur officiis commodi porro possimus earum consectetur libero quibusdam, pariatur omnis odit
+          eaque. Voluptas dolorem vel perferendis possimus nulla, eaque fugit dolorum officiis tempore libero similique vitae sint tenetur nesciunt a
+          repellat fuga autem quidem architecto est consectetur explicabo. Pariatur consectetur itaque nihil, porro possimus reiciendis laborum
+          ratione ab iusto vel unde sint quaerat obcaecati blanditiis a reprehenderit, soluta eius vero laudantium perferendis enim, et deserunt
+          ullam! Nemo mollitia numquam, neque et ipsum in qui optio suscipit possimus.
+        </p>
+      </main>
+      <aside class="sidebar left">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil deserunt adipisci magni perferendis dolorem eligendi optio culpa corporis
+          illo in? Nihil, sint aliquid aspernatur totam dolores dolorem nulla veritatis doloremque quia vitae consequatur velit minus ea. Eaque quo,
+          officiis reiciendis minima vitae eligendi quia neque quidem deleniti iste delectus numquam.
+        </p>
+      </aside>
+      <aside class="sidebar right">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil deserunt adipisci magni perferendis dolorem eligendi optio culpa corporis
+          illo in? Nihil, sint aliquid aspernatur totam dolores dolorem nulla veritatis doloremque quia vitae consequatur velit minus ea. Eaque quo,
+          officiis reiciendis minima vitae eligendi quia neque quidem deleniti iste delectus numquam.
+        </p>
+      </aside>
+    </div>
+  </body>
+</html>
